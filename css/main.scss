@@ -12,11 +12,12 @@
     margin: 0 auto;
     background: #dadada;
     grid-gap: 2px;
+    justify-content: center;
     grid-template: 
     "header header header header header header" 150px
     "nav nav nav nav nav nav" 40px
-    "article article article article aside aside" minmax(450px, auto)
-    "article article article article banner banner" minmax(450px, auto)
+    "article article article article aside aside" minmax(200px, auto)
+    "article article article article banner banner" minmax(200px, auto)
     "footer footer footer footer footer footer" 150px
     / minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px);
 }
@@ -32,7 +33,15 @@
     background: #5ad856;
     width: 80vw;
 }
-.item-3{ grid-area: article;}
+.item-3{ 
+    grid-area: article;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-auto-rows: 400px;
+    .sub-container{
+        background: #78c2f3;
+    }
+}
 .item-4{ grid-area: aside;}
 .item-5{ grid-area: banner;}
 .item-6{ grid-area: footer;}

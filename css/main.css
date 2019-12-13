@@ -11,8 +11,11 @@
   margin: 0 auto;
   background: #dadada;
   grid-gap: 2px;
-  grid-template: "header header header header header header" 150px "nav nav nav nav nav nav" 40px "article article article article aside aside" minmax(450px, auto) "article article article article banner banner" minmax(450px, auto) "footer footer footer footer footer footer" 150px/minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px);
-  grid-template: "header header header header header header" 150px "nav nav nav nav nav nav" 40px "article article article article aside aside" minmax(450px, auto) "article article article article banner banner" minmax(450px, auto) "footer footer footer footer footer footer" 150px/minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-template: "header header header header header header" 150px "nav nav nav nav nav nav" 40px "article article article article aside aside" minmax(200px, auto) "article article article article banner banner" minmax(200px, auto) "footer footer footer footer footer footer" 150px/minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px) minmax(-webkit-max-content, 300px);
+  grid-template: "header header header header header header" 150px "nav nav nav nav nav nav" 40px "article article article article aside aside" minmax(200px, auto) "article article article article banner banner" minmax(200px, auto) "footer footer footer footer footer footer" 150px/minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px) minmax(max-content, 300px);
 }
 
 .grid__item {
@@ -34,6 +37,15 @@
 
 .item-3 {
   grid-area: article;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 400px;
+}
+
+.item-3 .sub-container {
+  background: #78c2f3;
 }
 
 .item-4 {

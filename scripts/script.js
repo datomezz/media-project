@@ -5,3 +5,7 @@ window.onscroll = function(){
         document.querySelector(".item-2").style.position = "";
     }
 }
+
+let subContainer = document.querySelectorAll(".sub-container");
+let subContainerCount = subContainer.length / 3;
+document.querySelector(".item-3").style.gridTemplateRows = "repeat(" + subContainerCount + ", 400px)";
