@@ -40,11 +40,16 @@
     grid-auto-rows: 400px;
     .sub-container{
         background: #78c2f3;
+        padding: .5rem;
     }
 }
 .item-4{ grid-area: aside;}
 .item-5{ grid-area: banner;}
 .item-6{ grid-area: footer;}
+
+.article{
+    overflow: hidden;
+}
 
 @media screen and (max-width: 768px){
     .grid{
