@@ -4,8 +4,48 @@
     box-sizing: border-box;
 }
 .bg-color{
-    background: $bgcolor;
+    background: $bg_color;
 }
 .search{
-    height: 3rem !important;
+
+}
+.search__input{
+    padding: 0 !important;
+    outline-color: $main_color;
+    margin-right: .1rem;
+    &::placeholder{
+        font-size: .7rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding-left: .3rem;
+    }
+}
+.search__submit{
+    width:4rem;
+    height: auto;
+    font-size: .6rem;
+    font-weight: bold;
+    color: $main_color;
+    outline: none;
+    background: #fff;
+    border: .3px solid $main_color;
+    transition: .2s ease;
+    &:hover{
+        background-color: $main_color;
+        color: #fff;
+    }
+}
+.socials__icon{
+    color: $main_color;
+    font-size: 1.3rem;
+    transition: .2s ease;
+    &:hover{
+        color: gray;
+    }
+}
+
+@media screen and (max-width:375px){
+    body{
+        font-size: 12px !important;
+    }
 }
