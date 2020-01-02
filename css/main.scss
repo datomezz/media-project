@@ -1,21 +1,53 @@
 @import "_variables.scss";
 
+//MAIN
 *{
     box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+    &::selection{
+        background: $main_color;
+        color: #fff;
+    }
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 2px 0;
+}
+::-webkit-scrollbar-thumb{
+    background: $main_color;
+    border-radius: 10px;
+    &:hover{
+        background: gray;
+    }
+}
+a{
+    text-decoration: none !important;
+    color: #5a5a5a;
+    transition: .15s ease;
+    &:hover{
+        color: #000;
+    }
+    &:active{
+        color: $main_color;
+    }
 }
 .bg-color{
     background: $bg_color;
 }
-.search{
-
+.main-color{
+    color: $main_color;
 }
+// SEARCH
 .search__input{
     padding: 0 !important;
     outline-color: $main_color;
     margin-right: .1rem;
     &::placeholder{
         font-size: .7rem;
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: 1rem;
         padding-left: .3rem;
     }
@@ -23,8 +55,8 @@
 .search__submit{
     width:4rem;
     height: auto;
-    font-size: .6rem;
-    font-weight: bold;
+    font-size: .7rem;
+    font-weight: 600;
     color: $main_color;
     outline: none;
     background: #fff;
@@ -34,12 +66,64 @@
         color: #fff;
     }
 }
+//SOCIALS
 .socials__icon{
     color: $main_color;
     font-size: 1.3rem;
     transition: .2s ease;
     &:hover{
         color: gray;
+    }
+}
+// NAVBAR
+.topnav__brand{
+    color: gray;
+    transition: .2s;
+    &:hover{
+        color: $main_color;
+    }
+}
+.topnav__ul{
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.topnav__list{
+    margin-right: 1rem;
+    position: relative;
+}
+.topnav__link{
+    font-size: .8rem;
+    font-weight: 600;
+    &::after{
+        content: " ";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top:2.3rem;
+        left:0;
+        background: $main_color;
+        opacity: 0;
+        transition: .2s ease;
+    }
+    &:hover::after{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .topnav__link{
+        &::after{
+            width: 0; //for navigation wrapping without absolute possition errors
+        }
+    }
+}
+
+@media screen and (max-width:991px){
+    .topnav__ul{
+        @include flex(column, center, flex-start);
+        margin-top: .5rem;
     }
 }
 
