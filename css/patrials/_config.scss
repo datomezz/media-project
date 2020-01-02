@@ -1,0 +1,42 @@
+//MAIN
+*{
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+    &::selection{
+        background: $main_color;
+        color: #fff;
+    }
+}
+a{
+    text-decoration: none !important;
+    color: #5a5a5a;
+    transition: .15s ease;
+    &:hover{
+        color: #000;
+    }
+    &:active{
+        color: $main_color;
+    }
+}
+.bg-color{
+    background: $bg_color;
+}
+.main-color{
+    color: $main_color;
+}
+
+//SCROLLBAR
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 2px 0;
+}
+::-webkit-scrollbar-thumb{
+    background: $main_color;
+    border-radius: 10px;
+    &:hover{
+        background: gray;
+    }
+}

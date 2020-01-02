@@ -15,24 +15,6 @@
   color: #fff;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 2px 0;
-          box-shadow: inset 0 0 2px 0;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #FD603E;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: gray;
-}
-
 a {
   text-decoration: none !important;
   color: #5a5a5a;
@@ -54,6 +36,24 @@ a:active {
 
 .main-color {
   color: #FD603E;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px 0;
+          box-shadow: inset 0 0 2px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FD603E;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
 }
 
 .search__input {
@@ -173,6 +173,29 @@ a:active {
 
 .topnav__link:hover::after {
   opacity: 1;
+}
+
+.slider__img {
+  width: 100%;
+  height: 23rem;
+}
+
+.slider__dot {
+  border-radius: 50%;
+  width: .8rem !important;
+  height: .8rem !important;
+}
+
+.topnews {
+  border: 1px solid #FD603E;
+}
+
+.topnews__header {
+  width: 100%;
+  background: #FD603E;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1200px) {

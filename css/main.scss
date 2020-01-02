@@ -1,117 +1,26 @@
-@import "_variables.scss";
+@import "patrials/_variables.scss";
+@import "patrials/config";
+@import "patrials/_header.scss";
 
-//MAIN
-*{
-    box-sizing: border-box;
-    list-style: none;
-    font-family: sans-serif;
-    &::selection{
-        background: $main_color;
-        color: #fff;
-    }
+.slider__img{
+    width:100%;
+    height: 23rem;
 }
-::-webkit-scrollbar{
-    width:10px;
+.slider__dot{
+    border-radius: 50%;
+    width: .8rem !important;
+    height: .8rem !important;
 }
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 2px 0;
+.topnews{
+    border: 1px solid $main_color;
 }
-::-webkit-scrollbar-thumb{
+.topnews__header{
+    width: 100%;
     background: $main_color;
-    border-radius: 10px;
-    &:hover{
-        background: gray;
-    }
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
 }
-a{
-    text-decoration: none !important;
-    color: #5a5a5a;
-    transition: .15s ease;
-    &:hover{
-        color: #000;
-    }
-    &:active{
-        color: $main_color;
-    }
-}
-.bg-color{
-    background: $bg_color;
-}
-.main-color{
-    color: $main_color;
-}
-// SEARCH
-.search__input{
-    padding: 0 !important;
-    outline-color: $main_color;
-    margin-right: .1rem;
-    &::placeholder{
-        font-size: .7rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-        padding-left: .3rem;
-    }
-}
-.search__submit{
-    width:4rem;
-    height: auto;
-    font-size: .7rem;
-    font-weight: 600;
-    color: $main_color;
-    outline: none;
-    background: #fff;
-    transition: .2s ease;
-    &:hover{
-        background-color: $main_color;
-        color: #fff;
-    }
-}
-//SOCIALS
-.socials__icon{
-    color: $main_color;
-    font-size: 1.3rem;
-    transition: .2s ease;
-    &:hover{
-        color: gray;
-    }
-}
-// NAVBAR
-.topnav__brand{
-    color: gray;
-    transition: .2s;
-    &:hover{
-        color: $main_color;
-    }
-}
-.topnav__ul{
-    @include flex(row, flex-start, center);
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-}
-.topnav__list{
-    margin-right: 1rem;
-    position: relative;
-}
-.topnav__link{
-    font-size: .8rem;
-    font-weight: 600;
-    &::after{
-        content: " ";
-        width: 100%;
-        height: 2px;
-        position: absolute;
-        top:2.3rem;
-        left:0;
-        background: $main_color;
-        opacity: 0;
-        transition: .2s ease;
-    }
-    &:hover::after{
-        opacity: 1;
-    }
-}
-
 @media screen and (max-width:1200px){
     .topnav__link{
         &::after{
