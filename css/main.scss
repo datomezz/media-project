@@ -13,6 +13,8 @@
 }
 .topnews{
     border: 1px solid $main_color;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .topnews__header{
     width: 100%;
@@ -21,6 +23,15 @@
     font-size: 1rem;
     font-weight: 500;
 }
+.topnews__body{
+    width: 100%;
+    height: 100%;
+}
+.topnews__img{
+    width: 100%;
+    max-height: 10rem;
+}
+
 @media screen and (max-width:1200px){
     .topnav__link{
         &::after{
@@ -33,6 +44,18 @@
     .topnav__ul{
         @include flex(column, center, flex-start);
         margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width:575px){
+    .slider__img{
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width:425px){
+    .slider__img{
+        height: 14rem;
     }
 }
 
