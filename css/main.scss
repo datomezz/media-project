@@ -1,36 +1,8 @@
 @import "patrials/_variables.scss";
 @import "patrials/config";
 @import "patrials/_header.scss";
+@import "patrials/_slider.scss";
 
-.slider__img{
-    width:100%;
-    height: 23rem;
-}
-.slider__dot{
-    border-radius: 50%;
-    width: .8rem !important;
-    height: .8rem !important;
-}
-.topnews{
-    border: 1px solid $main_color;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-.topnews__header{
-    width: 100%;
-    background: $main_color;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-}
-.topnews__body{
-    width: 100%;
-    height: 100%;
-}
-.topnews__img{
-    width: 100%;
-    max-height: 10rem;
-}
 
 @media screen and (max-width:1200px){
     .topnav__link{
@@ -44,6 +16,9 @@
     .topnav__ul{
         @include flex(column, center, flex-start);
         margin-top: .5rem;
+    }
+    .topnews__img{
+        max-height: 20rem;
     }
 }
 
