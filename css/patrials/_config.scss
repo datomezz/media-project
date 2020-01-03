@@ -25,7 +25,9 @@ a{
 .main-color{
     color: $main_color;
 }
-
+.bg-main{
+    background: $main-color;
+}
 //SCROLLBAR
 ::-webkit-scrollbar{
     width:10px;
@@ -44,7 +46,6 @@ a{
 //HR-CATEGORY
 .hr-category{
     position: relative;
-    margin: 5rem 0;
 }
 .hr-category__text{
     background: $main-color;

@@ -3,6 +3,108 @@
 @import "patrials/_header.scss";
 @import "patrials/_slider.scss";
 
+//Article-news
+.article-news{
+    height: 26rem;
+    overflow: hidden;
+}
+.img-container{
+    overflow: hidden;
+    border-bottom: 3px solid $main-color;
+    position: relative;
+}
+.img-container__category{
+    position: absolute;
+    background: $main-color;
+    color: #fff;
+    bottom:0;
+    left:0;
+    font-size: .9   rem;
+    padding: 0 .5rem;
+    z-index: 10;
+    &:hover{
+        color : #fff;
+    }
+}
+.article-news__img{
+    cursor: pointer;
+    height: 12rem;
+    transition: .2s ease;
+    &:hover{
+        transform: scale(1.1);
+        filter: blur(1px);
+    }
+}
+.article-news__body{
+    height: 12rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.article-news__title{
+    color: #000;
+    transition: .2s ease;
+    font-weight: 600;
+    &:hover{
+        color: $main_color;
+    }
+}
+.article-news__text{
+    max-height: 5rem;
+    font-size: .8rem;
+    overflow:hidden;
+}
+.article-news__footer{
+    height: 2rem;
+    p{
+        font-size: .8rem;
+        font-weight: bold;
+    }
+}
+//SEE-MORE
+.see-more{
+    color: #fff;
+    transition: .2s ease;
+    &:hover{
+        color : #fff;
+        background: #cc4f33;
+    }
+}
+//FOOTER
+.footer{
+
+    background: #C4C4C4;
+}
+.footer-menu{
+    background: #fff;
+}
+.footer-menu__link{
+    padding-right: .5rem;
+    font-weight: bold;
+    font-size: .8rem;
+}
+.footer-img{
+    width: 5rem;
+
+}
+.footer-bottom{
+    background: #878787;
+}
+.footer-bottom__text{
+    font-size: .7rem;
+    font-weight: bold;
+}
+//GO-TOP
+.go-top{
+    opacity: 1;
+    position: fixed;
+    right:0;
+    top: 50%;
+    font-size: 2vw;
+    transition: .4s ease;
+    padding: 1vw .2vw 1vw 1vw;
+    border-bottom-left-radius: 10vw;
+    border-top-left-radius: 10vw;
+}
 
 @media screen and (max-width:1200px){
     .topnav__link{
@@ -22,9 +124,18 @@
     }
 }
 
+@media screen and (max-width: 767px){
+    .article-news__img{
+        height: 15rem;
+    }
+}
+
 @media screen and (max-width:575px){
     .slider__img{
         height: 17rem;
+    }
+    .go-top{
+        display: none;
     }
 }
 
