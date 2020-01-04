@@ -1,5 +1,4 @@
 
-
 window.onscroll = function(){
     let cursor = document.querySelector(".go-top");
     if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){

@@ -348,6 +348,7 @@ a:active {
 
 .footer-img {
   width: 5rem;
+  height: auto;
 }
 
 .footer-bottom {
@@ -468,6 +469,9 @@ a:active {
   }
   .go-top {
     display: none;
+  }
+  .footer-img {
+    width: 3rem !important;
   }
 }
 

@@ -72,7 +72,6 @@
 }
 //FOOTER
 .footer{
-
     background: #C4C4C4;
 }
 .footer-menu{
@@ -85,7 +84,7 @@
 }
 .footer-img{
     width: 5rem;
-
+    height: auto;
 }
 .footer-bottom{
     background: #878787;
@@ -186,6 +185,9 @@
     }
     .go-top{
         display: none;
+    }
+    .footer-img{
+        width: 3rem !important;
     }
 }
 
