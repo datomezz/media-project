@@ -3,6 +3,10 @@
 @import "patrials/_header.scss";
 @import "patrials/_slider.scss";
 
+html{
+    scroll-behavior: smooth;
+}
+
 //Article-news
 .article-news{
     height: 26rem;
@@ -143,6 +147,14 @@
     font-size: .9rem;
 }
 //TAGS
+.tags{
+    i{
+        color: $main-color;
+        margin-right: .5rem;
+        border-right: .4px solid #dddddd;
+        padding-right: .5rem;
+    }
+}
 .tags__tag{
     border:1px solid $main-color;
     border-radius: 10vw;
@@ -150,6 +162,7 @@
     font-size: .8rem;
     font-weight: bold;
     color: #000;
+    margin-top: 1rem;
     &:hover{
         background: $main-color;
         color: #fff;

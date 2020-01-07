@@ -248,6 +248,10 @@ a:active {
   border-bottom: 4px solid #FD603E;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .article-news {
   height: 26rem;
   overflow: hidden;
@@ -415,6 +419,13 @@ a:active {
   font-size: .9rem;
 }
 
+.tags i {
+  color: #FD603E;
+  margin-right: .5rem;
+  border-right: .4px solid #dddddd;
+  padding-right: .5rem;
+}
+
 .tags__tag {
   border: 1px solid #FD603E;
   border-radius: 10vw;
@@ -422,6 +433,7 @@ a:active {
   font-size: .8rem;
   font-weight: bold;
   color: #000;
+  margin-top: 1rem;
 }
 
 .tags__tag:hover {
